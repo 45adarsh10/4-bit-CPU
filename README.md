@@ -52,6 +52,6 @@ Icarus Verilog – Compilation and simulation
 GTKWave – Waveform visualization
 
 # How to Run
-iverilog -o cpu_tb.out CPU_tb.v CPU.v ProgramCounter.v InstructionMemory.v RegisterFile.v ALU.v DataMemory.v ControlUnit.v
-vvp cpu_tb.out
+iverilog -o cpu_tb.out CPU_tb.v CPU.v ProgramCounter.v InstructionMemory.v RegisterFile.v ALU.v DataMemory.v ControlUnit.v <br>
+vvp cpu_tb.out <br>
 gtkwave cpu_tb.vcd
