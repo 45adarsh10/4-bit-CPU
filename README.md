@@ -5,51 +5,51 @@ The project is intended for educational purposes and helps in understanding basi
 
 
 # CPU Features
-Instruction Width: 8 bits
-Datapath Width: 4 bits
-Architecture: Single-cycle processor
-Registers: 4 general-purpose registers (4-bit each)
+Instruction Width: 8 bits <br>
+Datapath Width: 4 bits<br>
+Architecture: Single-cycle processor<br>
+Registers: 4 general-purpose registers (4-bit each)<br>
 
 # Instruction Set:
-ADD – Arithmetic addition
-AND – Logical AND
-LOAD – Load data from memory to register
-STORE – Store register data to memory
+ADD – Arithmetic addition<br>
+AND – Logical AND<br>
+LOAD – Load data from memory to register<br>
+STORE – Store register data to memory<br>
 
 
 # Instruction Format
-Each instruction is 8 bits wide:
- [7:6] - Opcode ( Operation type )
- [5:4] - Rd ( Destination register )
- [3:2] - Rs ( Source register )
- [1:0] - Addr ( Memory address )
+Each instruction is 8 bits wide:<br>
+ [7:6] - Opcode ( Operation type )<br>
+ [5:4] - Rd ( Destination register )<br>
+ [3:2] - Rs ( Source register )<br>
+ [1:0] - Addr ( Memory address )<br>
 
 
 # Module Description
-ProgramCounter.v - Generates instruction addresses
-InstructionMemory.v - Stores program instructions (ROM)
-ControlUnit.v - Decodes opcode and generates control signals
-RegisterFile.v - Stores and provides register operands
-ALU.v - Performs arithmetic and logical operations
-DataMemory.v - Handles LOAD and STORE operations
-CPU.v - Top-level integration of all modules
-CPU_tb.v - Testbench for full CPU simulation
+ProgramCounter.v - Generates instruction addresses<br>
+InstructionMemory.v - Stores program instructions (ROM)<br>
+ControlUnit.v - Decodes opcode and generates control signals<br>
+RegisterFile.v - Stores and provides register operands<br>
+ALU.v - Performs arithmetic and logical operations<br>
+DataMemory.v - Handles LOAD and STORE operations<br>
+CPU.v - Top-level integration of all modules<br>
+CPU_tb.v - Testbench for full CPU simulation<br>
 
 
 # CPU Operation Flow
-1) Program Counter fetches the next instruction
-2) Instruction Memory outputs instruction
-3) Control Unit decodes opcode
-4) Register File provides operands
-5) ALU executes operation
-6) Data Memory accessed if required
-7)Result written back to register file
-Each instruction completes in one clock cycle.
+1) Program Counter fetches the next instruction<br>
+2) Instruction Memory outputs instruction<br>
+3) Control Unit decodes opcode<br>
+4) Register File provides operands<br>
+5) ALU executes operation<br>
+6) Data Memory accessed if required<br>
+7)Result written back to register file<br>
+Each instruction completes in one clock cycle.<br>
 
 # Simulation & Verification
-The design is simulated using:
-Icarus Verilog – Compilation and simulation
-GTKWave – Waveform visualization
+The design is simulated using:<br>
+Icarus Verilog – Compilation and simulation<br>
+GTKWave – Waveform visualization<br>
 
 # How to Run
 iverilog -o cpu_tb.out CPU_tb.v CPU.v ProgramCounter.v InstructionMemory.v RegisterFile.v ALU.v DataMemory.v ControlUnit.v <br>
